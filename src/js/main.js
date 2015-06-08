@@ -1,5 +1,12 @@
 $(document).ready(function(){
 
+  // Date
+  var today = new Date();
+  var formattedToday = (today.getMonth()+1) + '/' + today.getDate() + '/' + today.getFullYear();
+  console.log(formattedToday);
+  $(".js-date").prop('value', formattedToday);
+
+
   // Data from Google Spreadsheets for Events
   $.get("https://gridspree.io/ss/AxznvuNqkuT4it53fVoGRP", function(data) {
     console.log(data.rows[0].bal);
@@ -7,6 +14,8 @@ $(document).ready(function(){
     $(".js-number-loading").remove();
   });
 
+
+  // Lock form submit
   $('.js-form').submit(function() {
     $(this).find("input[type='submit']").prop({
       disabled: true,
