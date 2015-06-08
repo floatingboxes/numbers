@@ -23,11 +23,15 @@
         <div class="js-number number__text"></div>
       </div> 
 
-      <div class="form">
+      <div class="js-form form">
         <form action="https://gridspree.io/ss/GspK4uFkainRuaKecGQ8Ej" method="POST">
-         <input type="hidden" name="Date" placeholder="Date" value="Date">
-         <input type="text" name="Vendor" placeholder="Vendor">
-         <input type="text" name="Amt" placeholder="Amount">
+          <input type="hidden" name="date" placeholder="Date" value="Date">
+          <div class="form__field--vendor">
+            <input type="text" name="vendor" placeholder="Vendor" class="" required>
+          </div>
+          <div class="form__field--amt">
+            <input type="text" name="amt" pattern="[0-9]*" placeholder="Amount" required>
+          </div>
          <input type="submit" value="Add Receipt">
         </form>
       </div>
