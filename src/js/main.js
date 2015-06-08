@@ -6,4 +6,11 @@ $(document).ready(function(){
     $(".js-number").append(data.rows[0].bal);
     $(".js-number-loading").remove();
   });
+
+  $('.js-form').submit(function() {
+    $(this).find("input[type='submit']").prop({
+      disabled: true,
+      value: 'Adding...'
+    });
+  });
 });
