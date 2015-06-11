@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+  // Focus on vendor input
+  $('.form__field--vendor input').focus();
+
   // Date
   var today = new Date();
   var formattedToday = (today.getMonth()+1) + '/' + today.getDate() + '/' + today.getFullYear();
