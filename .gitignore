@@ -19,3 +19,4 @@ CVS
 node_modules/
 .sass-cache/
 src/css/styles.css
+src/css/styles.css.map
