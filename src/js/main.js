@@ -11,9 +11,11 @@ $(document).ready(function(){
 
 
   // Data from Google Spreadsheets for Events
-  $.get("https://gridspree.io/ss/AxznvuNqkuT4it53fVoGRP", function(data) {
-    console.log(data.rows[0].bal);
-    $(".js-number").append(data.rows[0].bal);
+  $.get("https://sheetsu.com/apis/33ede6bf", function(data) {
+    var dataArray = data.result;
+    var balance = dataArray[0].bal;
+    console.log(balance);
+    $(".js-number").append(balance);
     $(".js-number-loading").remove();
   });
 
