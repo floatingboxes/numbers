@@ -20,11 +20,12 @@ $(document).ready(function(){
   });
 
 
-  // Lock form submit
-  $('.js-form').submit(function() {
+  $('.js-form').submit(function(e) {
+    // Lock form submit
     $(this).find("input[type='submit']").prop({
       disabled: true,
       value: 'Adding...'
     });
   });
+
 });
