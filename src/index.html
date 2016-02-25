@@ -35,7 +35,6 @@
   </head>
   <body>
     <div class="container">
-
       <div class="number">
         <div class="js-number-loading number__loading"><span>•</span><span>•</span><span>•</span></div>
         <div class="js-number number__text"></div>
@@ -45,10 +44,10 @@
         <form class="js-form" action="https://sheetsu.com/apis/33ede6bf" method="POST" enctype="application/json">
           <input type="hidden" name="date" placeholder="Date" value="Date" class="js-date">
           <div class="form__field--vendor">
-            <input type="text" name="vendor" placeholder="Vendor" class="" required>
+            <input class="js-vendor" type="text" name="vendor" placeholder="Vendor" class="" required>
           </div>
           <div class="form__field--amt">
-            <input type="number" name="amt" placeholder="Amount" required>
+            <input class="js-amount" type="number" name="amt" placeholder="Amount" required>
           </div>
          <input type="submit" value="Add Receipt" class="js-submit">
         </form>
