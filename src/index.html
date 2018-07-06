@@ -59,8 +59,8 @@
             <tbody sheetsu="https://sheetsu.com/apis/v1.0/5ebfe66217b8/sheets/app">
               <tr>
                 <td>{{overview_category}}</td>
-                <td>{{overview_spent}}</td>
-                <td>{{overview_remaining}}</td>
+                <td class="{{logic_spent_class}}">{{overview_spent}}</td>
+                <td class="{{logic_remaining_class}}">{{overview_remaining}}</td>
               </tr>
             </tbody>
           </table>
@@ -130,7 +130,7 @@
 
             <div class="form-group">
               <label for="Amount">Amount</label>
-              <input type="number" class="form-control" id="Amount" name="Amount" required>
+              <input type="text" class="form-control" id="Amount" name="Amount" required>
               <small id="amountHelp" class="form-text text-muted">Make sure to use a negative number.</small>
             </div>
 
