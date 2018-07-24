@@ -49,9 +49,9 @@
       <!-- Balances Tab -->
       <div class="tab-pane fade show active" id="pills-balances" role="tabpanel" aria-labelledby="pills-balances-tab">
         <div sheetsu="https://sheetsu.com/apis/v1.0/5ebfe66217b8/sheets/app-status">
-          <p>Overall we're
-            <span class="{{daily_status_class}} font-weight-bold">{{daily_status}}</span> of budget. If we spend less than
-            <span class="font-weight-bold">{{daily_remaining}}</span> every day we'll stay on budget for the month.
+          <p class="small">We are
+            <span class="{{daily_status_class}} font-weight-bold">{{daily_status}}</span> pace on our budget. We should spend less than
+            <span class="font-weight-bold">{{daily_remaining}}</span> every day we'll stay on budget for the month. Updated {{last_updated}} days ago.
           </p>
         </div>
         <table class="table table-striped">
@@ -61,7 +61,7 @@
             <th scope="col">Remaining</th>
           </thead>
           <tbody sheetsu="https://sheetsu.com/apis/v1.0/5ebfe66217b8/sheets/app-table">
-            <tr>
+            <tr class="{{row_class}}">
               <td>{{overview_category}}</td>
               <td class="{{logic_spent_class}}">{{overview_spent}}</td>
               <td class="{{logic_remaining_class}}">{{overview_remaining}}</td>
