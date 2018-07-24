@@ -1,154 +1,162 @@
 <!doctype html>
 <html lang="en">
-  <head>
-      <meta charset="utf-8">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>Numbers</title>
-      <meta name="description" content="">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="apple-mobile-web-app-capable" content="yes">
 
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Numbers</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
 
-        <!-- iPhone 6 Plus portrait startup image -->
-      <link href="apple-touch-startup-image-1242x2148.png"
-            media="(device-width: 414px) and (device-height: 736px)
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- iPhone 6 Plus portrait startup image -->
+  <link href="apple-touch-startup-image-1242x2148.png" media="(device-width: 414px) and (device-height: 736px)
                    and (-webkit-device-pixel-ratio: 3)
-                   and (orientation: portrait)"
-            rel="apple-touch-startup-image">
+                   and (orientation: portrait)" rel="apple-touch-startup-image">
 
-      <!-- iPhone 6 Plus landscape startup image -->
-      <link href="apple-touch-startup-image-1182x2208.png"
-            media="(device-width: 414px) and (device-height: 736px)
+  <!-- iPhone 6 Plus landscape startup image -->
+  <link href="apple-touch-startup-image-1182x2208.png" media="(device-width: 414px) and (device-height: 736px)
                    and (-webkit-device-pixel-ratio: 3)
-                   and (orientation: landscape)"
-            rel="apple-touch-startup-image">
+                   and (orientation: landscape)" rel="apple-touch-startup-image">
 
-      <!-- iPhone 6 startup image -->
-      <link href="apple-touch-startup-image-750x1294.png"
-            media="(device-width: 375px) and (device-height: 667px)
-                   and (-webkit-device-pixel-ratio: 2)"
-            rel="apple-touch-startup-image">
+  <!-- iPhone 6 startup image -->
+  <link href="apple-touch-startup-image-750x1294.png" media="(device-width: 375px) and (device-height: 667px)
+                   and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
 
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-  </head>
-  <body>
-    <div class="container">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+</head>
 
-      <!-- Navigation -->
-      <div class="pt-4 pb-4">
-        <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" id="pills-balances-tab" data-toggle="pill" href="#pills-balances" role="tab" aria-controls="pills-balances" aria-selected="true">Balances</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="pills-add-tab" data-toggle="pill" href="#pills-add" role="tab" aria-controls="pills-add" aria-selected="false">Add Item</a>
-          </li>
-        </ul>
-      </div>
+<body>
+  <div class="container">
 
-      <div class="tab-content" id="pills-tabContent">
-        <!-- Balances Tab -->
-        <div class="tab-pane fade show active" id="pills-balances" role="tabpanel" aria-labelledby="pills-balances-tab">
-          <table class="table table-striped">
-            <thead class="thead-dark">
-              <th scope="col">Category</th>
-              <th scope="col">Spent</th>
-              <th scope="col">Remaining</th>
-            </thead>
-            <tbody sheetsu="https://sheetsu.com/apis/v1.0/5ebfe66217b8/sheets/app">
-              <tr>
-                <td>{{overview_category}}</td>
-                <td class="{{logic_spent_class}}">{{overview_spent}}</td>
-                <td class="{{logic_remaining_class}}">{{overview_remaining}}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <!-- Form Tab -->
-        <div class="tab-pane fade" id="pills-add" role="tabpanel" aria-labelledby="pills-add-tab">
-          <form id='foo'>
-            <!-- Send nothing to these for now-->
-            <input type="hidden" value="" name="Rec" >
-            <input type="hidden" value="" name="Description" >
-            <input type="hidden" value="" name="Account" >
-            <input type="hidden" value="" name="For" >
-            <input type="hidden" value="" name="Value" >
-
-            <div class="form-group">
-              <label for="Vendor">Vendor</label>
-              <input type="text" class="form-control" id="Vendor" name="Vendor" required>
-            </div>
-
-            <div class="form-group">
-              <label for="Category">Category</label>
-              <select class="form-control" id="Category" name="Category">
-                <option value="Cash">Cash</option>
-                <option value="Clothing: Dan">Clothing: Dan</option>
-                <option value="Clothing: Erin">Clothing: Erin</option>
-                <option value="Clothing: Kids">Clothing: Kids</option>
-                <option value="Dining: Breakfast">Dining: Breakfast</option>
-                <option value="Dining: Lunch">Dining: Lunch</option>
-                <option value="Dining: Dinner">Dining: Dinner</option>
-                <option value="Dining: School Lunch">Dining: School Lunch</option>
-                <option value="Entertainment: Art Supplies">Entertainment: Art Supplies</option>
-                <option value="Entertainment: Events">Entertainment: Events</option>
-                <option value="Entertainment: Reading">Entertainment: Reading</option>
-                <option value="Entertainment: Rec Sports">Entertainment: Rec Sports</option>
-                <option value="Entertainment: Toys + Games">Entertainment: Toys + Games</option>
-                <option value="Gifts: Family">Gifts: Family</option>
-                <option value="Gifts: Other">Gifts: Other</option>
-                <option value="Gifts: Us">Gifts: Us</option>
-                <option value="Groceries">Groceries</option>
-                <option value="Groceries: Entertaining">Groceries: Entertaining</option>
-                <option value="Groceries: Memberships">Groceries: Memberships</option>
-                <option value="House: Art">House: Art</option>
-                <option value="House: Furnishings">House: Furnishings</option>
-                <option value="House: Improvements + Repair">House: Improvements + Repair</option>
-                <option value="House: Landscaping">House: Landscaping</option>
-                <option value="House: Cleaning">House: Cleaning</option>
-                <option value="House: Tools">House: Tools</option>
-                <option value="Personal Care: Fitness">Personal Care: Fitness</option>
-                <option value="Personal Care: Hair & Spa">Personal Care: Hair & Spa</option>
-                <option value="Personal Care: Medical">Personal Care: Medical</option>
-                <option value="Personal Care: Supplies">Personal Care: Supplies</option>
-                <option value="Pets: Medicine">Pets: Medicine</option>
-                <option value="Pets: Supplies">Pets: Supplies</option>
-                <option value="Pets: Vet">Pets: Vet</option>
-                <option value="Technology: Games">Technology: Games</option>
-                <option value="Technology: Hardware">Technology: Hardware</option>
-                <option value="Technology: Software">Technology: Software</option>
-                <option value="Vacation">Vacation</option>
-                <option value="Vehicle: Gas">Vehicle: Gas</option>
-                <option value="Vehicle: Parking">Vehicle: Parking</option>
-                <option value="Vehicle: Repair">Vehicle: Repair</option>
-                <option value="Vehicle: Rideshare">Vehicle: Rideshare</option>
-                <option value="Vehicle: Tractor">Vehicle: Tractor</option>
-                <option value="Vehicle: Wash">Vehicle: Wash</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="Amount">Amount</label>
-              <input type="text" class="form-control" id="Amount" name="Amount" required>
-              <small id="amountHelp" class="form-text text-muted">Make sure to use a negative number.</small>
-            </div>
-
-            <div id='success'></div>
-
-            <button type="submit" class="btn btn-primary">Add to Budget</button>
-
-
-          </form>
-        </div>
-      </div>
-
-
+    <!-- Navigation -->
+    <div class="pt-4 pb-4">
+      <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="pills-balances-tab" data-toggle="pill" href="#pills-balances" role="tab" aria-controls="pills-balances"
+            aria-selected="true">Balances</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-add-tab" data-toggle="pill" href="#pills-add" role="tab" aria-controls="pills-add" aria-selected="false">Add Item</a>
+        </li>
+      </ul>
     </div>
-    <script src="//load.sheetsu.com"></script>
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script src='/js/google-sheet.js'></script>
-  </body>
+
+    <div class="tab-content" id="pills-tabContent">
+      <!-- Balances Tab -->
+      <div class="tab-pane fade show active" id="pills-balances" role="tabpanel" aria-labelledby="pills-balances-tab">
+        <div sheetsu="https://sheetsu.com/apis/v1.0/5ebfe66217b8/sheets/app-status">
+          <p>Overall we're
+            <span class="{{daily_status_class}} font-weight-bold">{{daily_status}}</span> of budget. If we spend less than
+            <span class="font-weight-bold">{{daily_remaining}}</span> every day we'll stay on budget for the month.
+          </p>
+        </div>
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <th scope="col">Category</th>
+            <th scope="col">Spent</th>
+            <th scope="col">Remaining</th>
+          </thead>
+          <tbody sheetsu="https://sheetsu.com/apis/v1.0/5ebfe66217b8/sheets/app-table">
+            <tr>
+              <td>{{overview_category}}</td>
+              <td class="{{logic_spent_class}}">{{overview_spent}}</td>
+              <td class="{{logic_remaining_class}}">{{overview_remaining}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Form Tab -->
+      <div class="tab-pane fade" id="pills-add" role="tabpanel" aria-labelledby="pills-add-tab">
+        <form id='foo'>
+          <!-- Send nothing to these for now-->
+          <input type="hidden" value="" name="Rec">
+          <input type="hidden" value="" name="Description">
+          <input type="hidden" value="" name="Account">
+          <input type="hidden" value="" name="For">
+          <input type="hidden" value="" name="Value">
+
+          <div class="form-group">
+            <label for="Vendor">Vendor</label>
+            <input type="text" class="form-control" id="Vendor" name="Vendor" required>
+          </div>
+
+          <div class="form-group">
+            <label for="Category">Category</label>
+            <select class="form-control" id="Category" name="Category">
+              <option value="Cash">Cash</option>
+              <option value="Clothing: Dan">Clothing: Dan</option>
+              <option value="Clothing: Erin">Clothing: Erin</option>
+              <option value="Clothing: Kids">Clothing: Kids</option>
+              <option value="Dining: Breakfast">Dining: Breakfast</option>
+              <option value="Dining: Lunch">Dining: Lunch</option>
+              <option value="Dining: Dinner">Dining: Dinner</option>
+              <option value="Dining: School Lunch">Dining: School Lunch</option>
+              <option value="Entertainment: Art Supplies">Entertainment: Art Supplies</option>
+              <option value="Entertainment: Events">Entertainment: Events</option>
+              <option value="Entertainment: Reading">Entertainment: Reading</option>
+              <option value="Entertainment: Rec Sports">Entertainment: Rec Sports</option>
+              <option value="Entertainment: Toys + Games">Entertainment: Toys + Games</option>
+              <option value="Gifts: Family">Gifts: Family</option>
+              <option value="Gifts: Other">Gifts: Other</option>
+              <option value="Gifts: Us">Gifts: Us</option>
+              <option value="Groceries">Groceries</option>
+              <option value="Groceries: Entertaining">Groceries: Entertaining</option>
+              <option value="Groceries: Memberships">Groceries: Memberships</option>
+              <option value="House: Art">House: Art</option>
+              <option value="House: Furnishings">House: Furnishings</option>
+              <option value="House: Improvements + Repair">House: Improvements + Repair</option>
+              <option value="House: Landscaping">House: Landscaping</option>
+              <option value="House: Cleaning">House: Cleaning</option>
+              <option value="House: Tools">House: Tools</option>
+              <option value="Personal Care: Fitness">Personal Care: Fitness</option>
+              <option value="Personal Care: Hair & Spa">Personal Care: Hair & Spa</option>
+              <option value="Personal Care: Medical">Personal Care: Medical</option>
+              <option value="Personal Care: Supplies">Personal Care: Supplies</option>
+              <option value="Pets: Medicine">Pets: Medicine</option>
+              <option value="Pets: Supplies">Pets: Supplies</option>
+              <option value="Pets: Vet">Pets: Vet</option>
+              <option value="Technology: Games">Technology: Games</option>
+              <option value="Technology: Hardware">Technology: Hardware</option>
+              <option value="Technology: Software">Technology: Software</option>
+              <option value="Vacation">Vacation</option>
+              <option value="Vehicle: Gas">Vehicle: Gas</option>
+              <option value="Vehicle: Parking">Vehicle: Parking</option>
+              <option value="Vehicle: Repair">Vehicle: Repair</option>
+              <option value="Vehicle: Rideshare">Vehicle: Rideshare</option>
+              <option value="Vehicle: Tractor">Vehicle: Tractor</option>
+              <option value="Vehicle: Wash">Vehicle: Wash</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="Amount">Amount</label>
+            <input type="text" class="form-control" id="Amount" name="Amount" required>
+            <small id="amountHelp" class="form-text text-muted">Make sure to use a negative number.</small>
+          </div>
+
+          <div id='success'></div>
+
+          <button type="submit" class="btn btn-primary">Add to Budget</button>
+
+
+        </form>
+      </div>
+    </div>
+
+
+  </div>
+  <script src="//load.sheetsu.com"></script>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <script src='/js/google-sheet.js'></script>
+</body>
+
 </html>
